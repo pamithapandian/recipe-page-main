@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Recipe page</title>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+
+    background-color: #f3e6d8;
+    min-height: 100vh;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+
+}
+
+main {
+    height: auto;
+    width: 500px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 10px 10px 7px 3px rgba(207,174,139,1);
+
+
+}
+
+.image-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.image-header img {
+    width: 95%;
+    border-radius: 10px
+}
+
+/* TEXTO HEADER */
+
+.text-header {
+text-align: left;
+margin-left: 24px;
+}
+
+h1 {
+    font-weight: 800;
+    word-spacing: 5px;
+    font-family: 'Young Serif', sans-serif;
+    color: hsl(24, 5%, 18%);
+}
+
+.text-header p {
+    color: hsl(14, 45%, 36%);
+    padding: 10px;
+    text-align: left;
+    line-height: 1.5em;
+    font-size: 0.7em;
+    font-family: 'Outfit', sans-serif;
+}
+
+.time {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px;
+    width: 90%;
+    background-color: hsl(330, 100%, 98%);
+    border-radius: 10px;
+
+}
+
+
+.container-time h3 {
+    color: hsl(332, 51%, 32%);
+    font-size: 1em;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.container-time ul {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8em;
+    line-height: 2em;
+    color: hsl(14, 45%, 36%);
+    padding-left: 30px;
+}
+
+
+.container-ingredients {
+    display: block;
+    padding: 25px;
+}
+
+.container-ingredients h2 {
+    font-family: 'Young Serif', sans-serif;
+    font-weight: 400;
+    color: hsl(14, 45%, 36%);
+    padding-bottom: 20px;
+}
+
+.container-ingredients ul {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8em;
+    font-weight: 600;
+    line-height: 1.5em;
+    color: hsl(14, 45%, 36%);
+    margin-left: 20px;
+
+}
+
+hr {
+    background-color: hsla(32, 10%, 34%, 0.123);
+    margin: 0 auto;
+    width: 90%;
+}
+
+.container-instructions {
+    display: block;
+    padding: 25px;
+}
+
+
+.container-instructions h2 {
+    font-family: 'Young Serif', sans-serif;
+    font-weight: 400;
+    color: hsl(14, 45%, 36%);
+    padding-bottom: 20px;
+}
+
+.container-instructions ol {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.7em;
+    font-weight: 400;
+    line-height: 1.5em;
+    color: hsl(14, 45%, 36%);
+    margin-left: 20px;
+}
+
+.container-instructions li {
+    padding: 2px;
+}
+
+.container-nutrition {
+    display: block;
+    padding: 25px;
+}
+
+.container-nutrition h2 {
+    font-family: 'Young Serif', sans-serif;
+    font-weight: 400;
+    color: hsl(14, 45%, 36%);
+    padding-bottom: 10px;
+}
+
+.container-nutrition p {
+    color: hsl(14, 45%, 36%);
+    line-height: 1.5em;
+    font-size: 0.7em;
+    font-family: 'Outfit', sans-serif;
+}
+
+
+table{
+    width: 93%;
+    color: hsl(14, 45%, 36%);
+    line-height: 1.5em;
+    font-size: 1em;
+
+}
+td {
+    color: hsl(14, 45%, 36%);
+    line-height: 1.5em;
+    font-size: 0.8em;
+    font-weight: 400;
+    font-family: 'Outfit', sans-serif;
+    padding: 0.7rem 0 0.7rem 0;
+    border-bottom: 1px solid rgb(103, 103, 103);
+
+}
+tr:last-child td{
+    border: none;
+}
+
+.tabela {
+
+    color: hsl(14, 45%, 36%);
+    line-height: 1.5em;
+    font-size: 0.9em;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Young+Serif&display=swap')
+</style>
+</head>
+<body>
+<main>
+  <!-- IMAGEM, RECEITA E PREVIEW -->
+  <section class="header">
+    <div class="image-header">
+      <img src="assets/images/image-omelette.jpeg" alt="">
+    </div>
+    <div class="text-header"> 
+    <h1>Simple Omelette Recipe</h1>
+    <p> An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked 
+      to perfection, optionally filled with your choice of cheese, vegetables, or meats.
+    </p>
+  </div>
+  </section>
+  <section class="time">
+    <div class="container-time">
+      <h3>Preparation time</h3>
+        <ul>
+         <li><strong>Total:</strong> Approximately 10 minutes</li>
+          <li><strong>Preparation:</strong> 5 minutes</li>
+         <li><strong>Cooking:</strong> 5 minutes</li>
+        </ul>
+    </div>
+  </section>
+  <section class="container-ingredients">
+
+      <h2>Ingredients</h2>
+      <ul>
+        <li>2-3 large eggs</li>
+        <li>Salt, to taste</li>
+        <li>Pepper, to taste</li>
+        <li>1 tablespoon of butter or oil</li>
+        <li>      Optional fillings: cheese, diced vegetables, cooked meats, herbs</li></ul>
+
+  </section>
+  <hr class="quebra">
+
+  <section class="container-instructions">
+
+    <h2>Instructions</h2>
+
+    <ol>
+      <li>
+        <strong>Beat the eggs:</strong> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. 
+        You can add a tablespoon of water or milk for a fluffier texture.
+      </li>
+      <li>
+        <strong>Heat the pan:</strong> Place a non-stick frying pan over medium heat and add butter or oil.
+      </li>
+      <li>
+        <strong>Cook the omelette:</strong> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure 
+        the eggs evenly coat the surface.
+      </li>
+      <li>
+        <strong>Add fillings (optional):</strong> When the eggs begin to set at the edges but are still slightly runny in the 
+        middle, sprinkle your chosen fillings over one half of the omelette.
+      </li>
+      <li>
+        <strong>Fold and serve:</strong> As the omelette continues to cook, carefully lift one edge and fold it over the 
+        fillings. Let it cook for another minute, then slide it onto a plate.
+      </li>
+      <li>
+        <strong>Enjoy:</strong> Serve hot, with additional salt and pepper if needed. 
+      </li>
+    </ol>
+  </section>
+  <hr>
+  <section class="container-nutrition">
+    <h2>Nutrition</h2>
+
+    <p> The table below shows nutritional values per serving without the additional fillings.</p>
+    <div>
+      <table class="table">
+        <table>
+          <tr>
+            <td>Calories</td>
+            <td class="tabela">277kcal</td>
+          </tr>
+          <tr>
+            <td>Carbs</td>
+            <td class="tabela">0g</td>
+          </tr>
+          <tr>
+            <td>Protein</td>
+            <td class="tabela">20g</td>
+          </tr>
+          <tr>
+            <td>Fat</td>
+            <td class="tabela">22g</td>
+          </tr>
+        </table>
+
+      </table>
+    <!-- <table >
+      <tr class="table">
+      <td>Calories
+        277kcal</td>
+      <td>Carbs
+        0g</td>
+      <td>Protein
+        20g</td>
+      <td>Fat
+        22g</td>
+      </tr>
+    </table> -->
+  </div>
+  </section>
+
+</main>
+
+</body>
+</html>
